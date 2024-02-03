@@ -5,9 +5,9 @@ import torch
 class Settings:
 
     def __init__(self,
-                 task: str = 'image',
+                 task: str = 'text',
                  algo: str = 'Discop',
-                 model_name: str = 'openai/imagegpt-small',
+                 model_name: str = 'gpt2',
                  temp: float = 1.0,
                  top_p: float = 0.92,
                  length: int = 100,
@@ -45,5 +45,8 @@ class Settings:
         return '\n'.join('{} = {}'.format(key, value) for (key, value) in self.__dict__.items())
 
 
-image_default_settings = Settings('image', model_name='openai/imagegpt-small', top_p=1.0)
+# text_default_settings = Settings('text', model_name='gpt2', top_p=0.92, length=100)
+text_default_settings = Settings('text', model_name='transfo-xl-wt103', top_p=0.92, length=100)
 
+image_default_settings = Settings('image', model_name='openai/imagegpt-small', top_p=1.0)
+audio_default_settings = Settings('text-to-speech', model_name='univoc', top_p=0.98)
