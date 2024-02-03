@@ -9,8 +9,8 @@ from scipy.io.wavfile import write
 from nltk import sent_tokenize
 from datasets import load_dataset
 
-from config import Settings, text_default_settings, image_default_settings, audio_default_settings
-from model import get_model, get_feature_extractor, get_tokenizer
+from config import Settings, image_default_settings
+from model import get_model, get_feature_extractor
 from utils import check_dir, SingleExampleOutput
 
 # top_p_lst = [0.80, 0.92, 0.95, 0.98, 1.0]
